@@ -1,0 +1,21 @@
+var img;
+var m;
+
+function preload() {
+  img = loadImage('mario.png');
+}
+
+function setup() {
+  m = new Mario();
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  imageMode(CENTER);
+  image(img, this.x, this.y, 200, 150);
+  m.mostrar();
+  if (keyIsPressed && keyCode == RIGHT_ARROM){
+    m.derecha();
+  }
+}
